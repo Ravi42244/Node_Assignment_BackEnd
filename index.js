@@ -151,9 +151,9 @@ app.post('/', async (req, res) => {
          reportTo,
          role
       } = req.body
-
+if(reportTo){
        const ids= await createEmp(reportTo);
-     
+}
     
 
     const newEmp= new emp({
