@@ -143,7 +143,7 @@ res.status(200).send("Deleted")
 // app.get('/', getUsers);
 app.post('/', async (req, res) => {
   try{
-    
+    let ids=[]
      const {
          firstName,
          lastName,
@@ -152,9 +152,7 @@ app.post('/', async (req, res) => {
          role
       } = req.body
 if(reportTo){
-       const ids= await createEmp(reportTo);
-}else{
-const ids = []
+        ids= await createEmp(reportTo);
 }
     
 
