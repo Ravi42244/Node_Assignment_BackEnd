@@ -153,6 +153,8 @@ app.post('/', async (req, res) => {
       } = req.body
 if(reportTo){
        const ids= await createEmp(reportTo);
+}else{
+const ids = []
 }
     
 
